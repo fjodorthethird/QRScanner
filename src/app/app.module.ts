@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
@@ -9,18 +9,20 @@ import { RouterModule } from '@angular/router';
 import { ZXingScannerModule } from '@zxing/ngx-scanner';
 import { ScannerComponent } from './pages/scanner/scanner.component';
 import { HistoryComponent } from './pages/history/history.component';
-import { AboutComponent } from './pages/about/about.component';
 import { NavbarComponent } from './features/navbar/navbar.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
+import { GeneratorComponent } from './pages/generator/generator.component';
+import { ToolbarComponent } from './features/toolbar/toolbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ScannerComponent,
     HistoryComponent,
-    AboutComponent,
-    NavbarComponent
+    NavbarComponent,
+    GeneratorComponent,
+    ToolbarComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -34,7 +36,8 @@ import { MatIconModule } from '@angular/material/icon';
     }),
     RouterModule,
     NoopAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    SweetAlert2Module.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

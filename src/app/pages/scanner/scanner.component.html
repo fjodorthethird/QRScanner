@@ -1,11 +1,10 @@
 
-  
-  <h1>QR Scanner</h1>
-  <zxing-scanner (scanSuccess)="onCodeResult($event)"></zxing-scanner>
-  <p>
-    <strong>Scan Result</strong>
-    <strong> {{scanResult}}</strong>
-  </p>
-  
+  <div style="width: 100%; height: 100%">
+    <zxing-scanner
+     (scanSuccess)="onCodeResult($event)"
+     style="height: 100%; width: 100%"></zxing-scanner>
+    <div class="hole"></div>
+  </div>
+
   <router-outlet></router-outlet>
   
