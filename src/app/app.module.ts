@@ -14,6 +14,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { GeneratorComponent } from './pages/generator/generator.component';
 import { ToolbarComponent } from './features/toolbar/toolbar.component';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { ToolbarComponent } from './features/toolbar/toolbar.component';
     }),
     RouterModule,
     NoopAnimationsModule,
+    MatListModule,
     MatIconModule,
     SweetAlert2Module.forRoot()
   ],

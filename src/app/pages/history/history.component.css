@@ -1,4 +1,12 @@
-body{
+
+
+mat-list {
+    width: auto;
+    margin: auto;
     margin-top: 60px;
-    overflow: hidden;
-}
+    padding: 5px;
+  }
+
+  mat-list-item {
+    border-bottom: 1px solid #009688;
+  }

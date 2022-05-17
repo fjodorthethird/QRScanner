@@ -1,2 +1,6 @@
-<p>history works!</p>
-
+<mat-list>
+    <mat-list-item *ngFor="let code of codes">
+        <mat-icon>subject</mat-icon>
+      <div mat-line>{{code.code}}</div>
+    </mat-list-item>
+  </mat-list>
